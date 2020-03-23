@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .usuario-conteudo {
+      background-color: #EEE;
+      padding: 20px 3px 10px 4px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+
+<body ng-app="myApp">
+  <div ng-view></div>
+  <div class="list-group">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="usuario-conteudo">
+          <hr>
+          <h1>Investimentos</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Objetivo</th>
+                <th>Saldo Total Disponível</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Investimento I</td>
+                <td>Aposentadoria</td>
+                <td>R$ 75.000,00</td>
+                <td>
+                  <a href="resgatar-investimento">Resgatar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Investimento II</td>
+                <td>Viagem</td>
+                <td>R$ 24.000,00</td>
+                <td>
+                  <a href="resgatar-investimento.html">Resgatar</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Investimento III</td>
+                <td>Negócio</td>
+                <td>R$ 25.000,00</td>
+                <td>
+                  <a href="views/resgatar-investimento.html">Resgatar</a>
+                </td>
+              </tr>
+              <tr ng-repeat="investidor in investidores">
+                <td>{{investidor.nome}}</td>
+                <td>{{investidor.senha}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="views/resgatar-investimento.html"></script>
+</body>
+
+</html>
